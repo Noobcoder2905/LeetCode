@@ -1,0 +1,44 @@
+First Repeated Character
+
+Write program to find first repeted character from string. In case if there is no any repeated character within string then it should return '0'. 
+
+For example
+input string : geeksforgeeks 
+output : e
+
+Solution:
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.lang.*;
+
+class Main {
+
+public static void main(String[] args){
+
+Scanner scan = new Scanner(System.in);
+String s = scan.nextLine();
+
+	System.out.println(findFirstRepetedCharacter(s));
+}
+
+static char findFirstRepetedCharacter(String s) {
+   char rep='0';
+   for(int i=0;i<s.length();i++)
+     {
+		 char temp=s.charAt(i);
+	
+		 for(int j=i+1;j<s.length();j++)
+		   {
+			   if(s.charAt(j)==temp)
+			   {
+				   rep=temp;
+				   break;
+			   }
+		   }   
+	 }
+	 return rep;  
+}
+}
