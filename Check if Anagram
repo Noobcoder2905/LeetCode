@@ -1,0 +1,49 @@
+Check two string anagram or not
+
+Write a Java Program to check if two strings are anagrams. If two strings are anagram it should return true otherwise false. 
+
+For Example :
+input 
+string1 : quescol 
+string2 : colsque 
+Output : true
+
+import java.io.*;
+  import java.util.*;
+  import java.text.*;
+  import java.math.*;
+  import java.util.regex.*;
+  import java.lang.*; 
+  class Main {
+  public static void main(String[] args) 
+  {
+    
+     String s1 ="";
+     String s2="";
+     Scanner sc = new Scanner(System.in);
+     s1=sc.nextLine();
+     s2=sc.nextLine();
+      String temp="";
+     int s1len=0;
+     int s2len=0;
+     s1len=s1.length();
+     s2len=s2.length();
+
+     int middle=s1len-1;
+     if(s1.length()!=s2.length())
+     {
+       System.out.print("false");
+     }
+     else
+     {
+       char[] ArrayS1=s1.toLowerCase().toCharArray();
+       char[] ArrayS2=s2.toLowerCase().toCharArray();
+       Arrays.sort(ArrayS1);
+       Arrays.sort(ArrayS2);
+       boolean status;
+       status=Arrays.equals(ArrayS1,ArrayS2);
+      System.out.print(status);
+     }
+      }
+  }
+  
