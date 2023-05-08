@@ -1,0 +1,34 @@
+Check element exist or not
+
+Write program to check element exist or not within array list. If exist then it will return true and if not exist then it should return false. 
+The first line contains an integer,n , denoting the size of the array. 
+The second line contains space-separated integers representing the array's elements.
+
+Input array : 12 35 1 10 34 98 
+key = 34 
+output : true
+
+Soluion:
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.lang.*;
+class Main {
+public static void main(String[] args) {
+   Scanner sc = new Scanner(System.in);
+   ArrayList<Integer> numbers = new ArrayList<>();
+
+   int n = sc.nextInt();
+
+   for (int i =0; i<n; i++){
+      int num = sc.nextInt();
+      numbers.add(num);
+   }
+   int key = sc.nextInt();
+   Boolean exists = numbers.contains(key);
+   System.out.print(exists);
+      }
+
+  }
