@@ -1,0 +1,32 @@
+Iterate Map through lamda expression
+
+Write a program to traverse (or iterate) HashMap and print it using Lambda Expression
+
+Solution:
+import java.util.*;
+class Main {
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int n = Integer.parseInt(scan.nextLine());
+		
+
+		Map<String, String> map = new LinkedHashMap<>();
+
+		for (int i = 0; i < n; i++) {
+            String b = scan.next();
+            String c = scan.next();
+
+           map.put(b, c);
+        }
+
+		iterateAndPrint(map, n);
+
+	}
+
+	private static void iterateAndPrint(Map<String, String> map, int n) {
+		
+		map.forEach((k, v) -> System.out.println(k + " " + v));
+
+		}
+}
