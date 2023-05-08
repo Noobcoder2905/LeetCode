@@ -1,0 +1,32 @@
+Reverse String
+
+Write program to reverse string without using any inbuilt function. 
+
+For example 
+input string : Geeks 
+output : skeeG
+
+Solution:
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Main {
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		String s = scan.nextLine();
+		System.out.println(reverse(s));
+	}
+
+	public static String reverse(String s) {
+		// your code 
+		String revStr= " ";
+		char ch;
+		for(int i=s.length(); i>0; --i){
+			revStr= revStr+(s.charAt(i-1));
+		}
+	
+		return revStr;
+	}
+}
