@@ -1,0 +1,43 @@
+Find all number start with 1
+
+Given a list of integers, find out all the numbers starting with 1 using Stream functions. 
+
+For example we have input array list
+list : 10 15 8 49 25 98 32 
+output : 10 15
+
+Solution:
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Collections;
+
+ class Main {
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int n = Integer.parseInt(scan.nextLine());
+		int i=0;
+
+		List<String> list = new ArrayList<String>();
+
+		while(i<n){
+
+		list.add(scan.nextLine());
+		i++;
+		}
+    
+		System.out.println(findAndPrint(list, n));
+	}
+
+	private static List<String>  findAndPrint(List<String> arrayList, int n) {
+		List<String> newList=new ArrayList<>();
+	   for(int i=0;i<arrayList.size();i++){
+		   if(arrayList.get(i).charAt(0)=='1'){
+			   newList.add(arrayList.get(i));
+
+		   }
+	   }
+	   return newList;
+	}
+}
